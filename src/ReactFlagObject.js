@@ -1,11 +1,11 @@
-var React = require('react');
+import Flag from './Flag.js';
+import Body from './Body.js';
+import Image from './Image.js';
+import Img from './Img.js';
 
-var ReactFlagObject = React.createClass({
-	
-	render () {
-		return <div>React Flag Object</div>;
-	}
-	
-});
+// TODO (with React 0.14.x):
+// * use content to push `reverse` prop to Flag
+// * use content to push `bottom` prop to Flag
+// * use content to push `top` prop to Flag
 
-export default ReactFlagObject;
+export default { Flag, Body, Image, Img };
