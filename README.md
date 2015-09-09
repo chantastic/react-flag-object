@@ -1,7 +1,14 @@
+# WIP WARNING
+
+This is such a niave implementation, it's shameful. It works but like, there's a good chance you don't want to use it. Consider yourself warned.
+
+One of the biggest shortcoming is that modifiers can't be set on the root component and trickle down to child (not-owned) components. This will be resolved in a React@0.14 release.
+
 # React Flag Object
 
-__COMPONENT DESCRIPTION GOES HERE__
+A React.js Flag Object implementation, using inline styles.
 
+The Flag Object was engineered by Harry Roberts (@csswizardry) and detailed here: http://csswizardry.com/2013/05/the-flag-object/
 
 ## Demo & Examples
 
@@ -33,19 +40,29 @@ npm install react-flag-object --save
 __EXPLAIN USAGE HERE__
 
 ```
-var ReactFlagObject = require('react-flag-object');
+import { Flag, Body, Image, Img } from 'react-flag-object';
 
-<ReactFlagObject>Example</ReactFlagObject>
+var App = React.createClass({
+  render () {
+    return (
+      <Flag>
+        <Image>
+          <Img src="http://0.gravatar.com/avatar/d56966cb85dc4153ceeec7ca0bdb568e" alt="chantastic" />
+        </Image>
+
+        <Body>
+          I've spent most of my career focused on taming styles in CSS. I saw it as a problem that would never be solved. Then, #reactjs happened.
+@chantastic 7 hours ago
+        </Body>
+      </Flag>
+    );
+  }
+});
 ```
-
-### Properties
-
-* __DOCUMENT PROPERTIES HERE__
 
 ### Notes
 
-__ADDITIONAL USAGE NOTES__
-
+One of the biggest shortcoming is that modifiers can't be set on the root component and trickle down to child (not-owned) components. This will be resolved in a React@0.14 release.
 
 ## Development (`src`, `lib` and the build process)
 
